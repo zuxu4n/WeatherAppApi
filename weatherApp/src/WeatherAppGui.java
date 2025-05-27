@@ -18,7 +18,7 @@ import java.util.List;
 
 public class WeatherAppGui extends JFrame {
     private JSONObject weatherData;
-    private final String API_KEY = "c1a42ab28b7af8f4ac28a5535dca1a96"; // your OpenWeatherMap API key
+    private final String API_KEY = "asdf"; // your OpenWeatherMap API key
 
     private JWindow suggestionWindow;
     private JList<String> suggestionList;
@@ -274,21 +274,42 @@ public class WeatherAppGui extends JFrame {
         return null;
     }
 
-    // Static list of locations - you can expand this as needed
+    // Static list of locations
     private static final String[] LOCATIONS = {
             "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
-            "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
-            "London", "Manchester", "Birmingham", "Liverpool", "Glasgow",
-            "Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa",
-            "Tokyo", "Osaka", "Kyoto", "Yokohama", "Nagoya",
-            "Paris", "Lyon", "Marseille", "Toulouse", "Nice",
-            "Berlin", "Munich", "Hamburg", "Cologne", "Frankfurt",
-            "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
-            "Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata",
-            "Beijing", "Shanghai", "Guangzhou", "Shenzhen", "Chengdu",
-            "São Paulo", "Rio de Janeiro", "Brasília", "Salvador", "Fortaleza",
-            "Mexico City", "Guadalajara", "Monterrey", "Puebla", "Tijuana",
-            "Moscow", "Saint Petersburg", "Novosibirsk", "Yekaterinburg", "Kazan"
+"Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
+"London", "Manchester", "Birmingham", "Liverpool", "Glasgow",
+"Edinburgh", "Aberdeen", "Inverness", // Scotland additions
+"Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa",
+"Quebec", "Winnipeg", "Halifax", "Victoria", // More Canada
+"Tokyo", "Osaka", "Kyoto", "Yokohama", "Nagoya",
+"Paris", "Lyon", "Marseille", "Toulouse", "Nice",
+"Lille", "Bordeaux", "Strasbourg", "Nantes", // More France
+"Berlin", "Munich", "Hamburg", "Cologne", "Frankfurt",
+"Stuttgart", "Düsseldorf", "Leipzig", "Dresden", // More Germany
+"Rome", "Milan", "Naples", "Turin", "Palermo",
+"Florence", "Venice", "Bologna", "Genoa", // Italy
+"Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
+"Canberra", "Hobart", "Darwin", // More Australia
+"Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata",
+"Hyderabad", "Ahmedabad", "Pune", "Jaipur", // More India
+"Beijing", "Shanghai", "Guangzhou", "Shenzhen", "Chengdu",
+"Hangzhou", "Wuhan", "Nanjing", "Xi'an", // More China
+"São Paulo", "Rio de Janeiro", "Brasília", "Salvador", "Fortaleza",
+"Belo Horizonte", "Curitiba", "Manaus", // More Brazil
+"Mexico City", "Guadalajara", "Monterrey", "Puebla", "Tijuana",
+"Moscow", "Saint Petersburg", "Novosibirsk", "Yekaterinburg", "Kazan",
+"Vladivostok", "Sochi", "Samara", // More Russia
+"Seoul", "Busan", "Incheon", "Daegu", // South Korea
+"Bangkok", "Chiang Mai", "Phuket", // Thailand
+"Hong Kong", "Taipei", "Singapore", "Jakarta", "Hanoi",
+"Ho Chi Minh City", "Manila", "Kuala Lumpur", "Istanbul", "Dubai",
+"Abu Dhabi", "Doha", "Riyadh", "Jeddah", "Cape Town",
+"Johannesburg", "Nairobi", "Casablanca", "Lagos", "Accra",
+"Cairo", "Alexandria", "Tunis", "Algiers", "Tehran",
+"Baghdad", "Jerusalem", "Amman", "Beirut", "Damascus",
+"Antarctica", "McMurdo Station"
+
     };
 
     private List<String> getLocationSuggestions(String query) {
